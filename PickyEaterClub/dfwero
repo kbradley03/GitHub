@@ -1,0 +1,807 @@
+[1mdiff --cc index.html[m
+[1mindex 03537f0,8739856..0000000[m
+mode 100755,100755..100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@@ -1,400 -1,398 +1,801 @@@[m
+[32m++<<<<<<< HEAD[m
+[32m +<!DOCTYPE HTML>[m
+[32m +<html>[m
+[32m +<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">[m
+[32m +<head>[m
+[32m +	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>[m
+[32m +	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">[m
+[32m +	<title>Picky Eater Club</title>[m
+[32m +	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">[m
+[32m +	<link rel="stylesheet" id="camera-css"  href="css/flexslider.css" type="text/css" media="all">[m
+[32m +	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">[m
+[32m +	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">[m
+[32m +	[m
+[32m +	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>[m
+[32m +	[m
+[32m +	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>[m
+[32m +	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>[m
+[32m +	<script type="text/javascript" src="js/slider/jquery.flexslider-min.js"></script>[m
+[32m +	<script src="js/slider/functions.js" type="text/javascript"></script>[m
+[32m +	<script src="js/slider/script.js" type="text/javascript"></script>[m
+[32m +	<script type="text/javascript" src="js/js.js"></script>[m
+[32m +	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>[m
+[32m +	<script type="text/javascript" src="js/waypoints.min.js"></script>[m
+[32m +	[m
+[32m +	<!--[if lt IE 9]>[m
+[32m +		<script src="js/html5shiv.js"></script>[m
+[32m +		<script src="js/respond.src.js"></script>[m
+[32m +	<![endif]-->[m
+[32m +	[m
+[32m +	<script type="text/javascript">[m
+[32m +		$(document).ready(function(){	[m
+[32m +			$("#ajax-contact-form").submit(function() {[m
+[32m +				var str = $(this).serialize();		[m
+[32m +				$.ajax({[m
+[32m +					type: "POST",[m
+[32m +					url: "contact_form/contact_process.php",[m
+[32m +					data: str,[m
+[32m +					success: function(msg) {[m
+[32m +						// Message Sent - Show the 'Thank You' message and hide the form[m
+[32m +						if(msg == 'OK') {[m
+[32m +							result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';[m
+[32m +							$("#fields").hide();[m
+[32m +						} else {[m
+[32m +							result = msg;[m
+[32m +						}[m
+[32m +						$('#note').html(result);[m
+[32m +					}[m
+[32m +				});[m
+[32m +				return false;[m
+[32m +			});															[m
+[32m +		});		[m
+[32m +	</script>[m
+[32m +	[m
+[32m +</head>[m
+[32m +[m
+[32m +<body>[m
+[32m +[m
+[32m +<div class="menu">	[m
+[32m +	<div class="container clearfix">[m
+[32m +[m
+[32m +		<div id="logo" class="fleft">[m
+[32m +			<a href="javascript:void(0);"><img class="logo_big" src="images/logo.png"><img class="logo_small" src="images/logo_small.png"></a>[m
+[32m +		</div>[m
+[32m +		[m
+[32m +		<div id="nav" class="fright">[m
+[32m +			<ul class="navigation">[m
+[32m +				<li data-slide="1">Home</li>[m
+[32m +				<li data-slide="2">About</li>[m
+[32m +				<li data-slide="4">Menu</li>[m
+[32m +                    <!--These nav items are taken out. Their related sections in the page have been taken out as well. -->[m
+[32m +                    <!--<li data-slide="5">Gallery</li>-->[m
+[32m +				    <!--<li data-slide="6">Events</li>-->[m
+[32m +				<li data-slide="10">Contact</li>[m
+[32m +			</ul>[m
+[32m +		</div>[m
+[32m +	[m
+[32m +	</div>[m
+[32m +</div>[m
+[32m +[m
+[32m +[m
+[32m +<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">[m
+[32m +	<div class="effect_2 padding_slide1">[m
+[32m +		<div class="container clearfix">[m
+[32m +			<div id="content" class="grid_12">[m
+[32m +				<div class="filtr_bg">[m
+[32m +					<h1>Welcome to Picky Eater Club!</h1>[m
+[32m +					<h2>- Delicious Vegan Food</h2>[m
+[32m +					<div class="bord_in_red"></div>[m
+[32m +					<p>We believe that when you are conscious about the things you put in your body, this promotes strength, beauty and happier existence!</p>[m
+[32m +				</div>[m
+[32m +				<a class="button" title="" data-slide="2">Read More</a>[m
+[32m +			</div>[m
+[32m +		</div>[m
+[32m +	</div>[m
+[32m +</div>[m
+[32m +[m
+[32m +[m
+[32m +[m
+[32m +<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">[m
+[32m +	<div class="container clearfix">[m
+[32m +		[m
+[32m +		<div id="content" class="grid_12">[m
+[32m +			<h1>About</h1>[m
+[32m +			<h2>Picky Eater currently provides delectable vegan cupcakes in a variety of flavors.[m
+[32m +We use all organic ingredients and earth friendly packaging for our cupcakes.[m
+[32m +There will be more vegan items to come in the near future. Come join our club and[m
+[32m +members are welcome!</h2>[m
+[32m +			<img class="icon_img" src="images/icon10.png" />[m
+[32m +		</div>[m
+[32m +		<div id="content" class="grid_12">[m
+[32m +			<h4>Who We Are?</h4>[m
+[32m +			<img class="about_img" src="images/about_img1.jpg" alt="" />[m
+[32m +			<p>[m
+[32m +Picky eater is a club where vegans and other people whom are picky about the[m
+[32m +things they put in their bodies due to dietary restrictions or conscious reasons[m
+[32m +aren’t ostracized but supported.<br>[m
+[32m +Peace, love and veggies are the mantra of the Picky Eater Club. The Picky Eater Club[m
+[32m +envisions a Chicago and even greater a planet where people can have numerous[m
+[32m +options to consume healthy, organic, earth friendly and flavorful vegan food.<br>[m
+[32m +We embrace being different in this club! We firmly believe that by expanding[m
+[32m +thoughts and taste pallets we will be able to end the earth’s pain! Not to mention[m
+[32m +stop war, end child obesity has free parking everywhere for everyone in the city of[m
+[32m +Chicago!<br>[m
+[32m +</p>[m
+[32m +			<p></p>[m
+[32m +		</div>[m
+[32m +	</div>[m
+[32m +</div>[m
+[32m +[m
+[32m +[m
+[32m +[m
+[32m +<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">[m
+[32m +	<div class="effect_2 padding_slide3">[m
+[32m +		<div class="container clearfix">[m
+[32m +		[m
+[32m +			<div id="content" class="grid_12">[m
+[32m +				<p>Vegen food is soul food in it truest form. Soul food means to feed the soul.</p>[m
+[32m +			</div>[m
+[32m +		[m
+[32m +		</div>[m
+[32m +	</div>[m
+[32m +</div>[m
+[32m +[m
+[32m +[m
+[32m +[m
+[32m +<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">[m
+[32m +	<div class="container clearfix">[m
+[32m +		[m
+[32m +		<div id="content" class="grid_12">[m
+[32m +			<h1><span>Cupcakes</span></h1>[m
+[32m +			<h2>Picky Eater Club specializes in Vegan(dairy and egg free),trans fat-free deserts.</h2>[m
+[32m +			<img class="icon_img" src="images/icon11.png" />[m
+[32m +			<div class="overflow_hidden">[m
+[32m +                <div id="align-center" >[m
+[32m +				<!-- portfolio_block -->[m
+[32m +<!--Added in to center the three cupcakes, take out once there are more than three #update-->[m
+[32m +				<ul class="item gallery-list">                     [m
+[32m +					<li class="grid_3">[m
+[32m +						<a href="javascript:void(0);" class="hover_img">[m
+[32m +							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m +							<img src="images/portfolio/1.jpg" alt="" />[m
+[32m +							<span class="portfolio_descr">[m
+[32m +								<p>Aliquam posuere</p>[m
+[32m +								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m +								<span class="more_link" >More</span>[m
+[32m +							</span>[m
+[32m +						</a>[m
+[32m +					</li>[m
+[32m +					<li class="grid_3">[m
+[32m +						<a href="javascript:void(0);" class="hover_img">[m
+[32m +							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m +							<img src="images/portfolio/2.jpg" alt="" />[m
+[32m +							<span class="portfolio_descr">[m
+[32m +								<p>Aliquam posuere</p>[m
+[32m +								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m +								<span class="more_link" >More</span>[m
+[32m +							</span>[m
+[32m +						</a>[m
+[32m +					</li>[m
+[32m +					<li class="grid_3">[m
+[32m +						<a href="javascript:void(0);" class="hover_img">[m
+[32m +							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m +							<img src="images/portfolio/3.jpg" alt="" />[m
+[32m +							<span class="portfolio_descr">[m
+[32m +								<p>Aliquam posuere</p>[m
+[32m +								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m +								<span class="more_link" >More</span>[m
+[32m +							</span>[m
+[32m +						</a>[m
+[32m +					</li>[m
+[32m +					<!--Commenting out unneccessary menu images-->[m
+[32m +                    <!--<li class="grid_3">[m
+[32m +						<a href="javascript:void(0);" class="hover_img">[m
+[32m +							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m +							<img src="images/portfolio/4.jpg" alt="" />[m
+[32m +							<span class="portfolio_descr">[m
+[32m +								<p>Aliquam posuere</p>[m
+[32m +								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m +								<span class="more_link" >More</span>[m
+[32m +							</span>[m
+[32m +						</a>[m
+[32m +					</li>[m
+[32m +					<li class="grid_3">[m
+[32m +						<a href="javascript:void(0);" class="hover_img">[m
+[32m +							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m +							<img src="images/portfolio/5.jpg" alt="" />[m
+[32m +							<span class="portfolio_descr">[m
+[32m +								<p>Aliquam posuere</p>[m
+[32m +								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m +								<span class="more_link" >More</span>[m
+[32m +							</span>[m
+[32m +						</a>[m
+[32m +					</li>[m
+[32m +					<li class="grid_3">[m
+[32m +						<a href="javascript:void(0);" class="hover_img">[m
+[32m +							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m +							<img src="images/portfolio/6.jpg" alt="" />[m
+[32m +							<span class="portfolio_descr">[m
+[32m +								<p>Aliquam posuere</p>[m
+[32m +								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m +								<span class="more_link" >More</span>[m
+[32m +							</span>[m
+[32m +						</a>[m
+[32m +					</li>[m
+[32m +					<li class="grid_3">[m
+[32m +						<a href="javascript:void(0);" class="hover_img">[m
+[32m +							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m +							<img src="images/portfolio/7.jpg" alt="" />[m
+[32m +							<span class="portfolio_descr">[m
+[32m +								<p>Aliquam posuere</p>[m
+[32m +								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m +								<span class="more_link" >More</span>[m
+[32m +							</span>[m
+[32m +						</a>[m
+[32m +					</li>[m
+[32m +					<li class="grid_3">[m
+[32m +						<a href="javascript:void(0);" class="hover_img">[m
+[32m +							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m +							<img src="images/portfolio/8.jpg" alt="" />[m
+[32m +							<span class="portfolio_descr">[m
+[32m +								<p>Aliquam posuere</p>[m
+[32m +								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m +								<span class="more_link" >More</span>[m
+[32m +							</span>[m
+[32m +						</a>[m
+[32m +					</li>-->[m
+[32m +					<div class="clear"></div>[m
+[32m +				</ul>   [m
+[32m +				<!-- //portfolio_block -->   [m
+[32m +			</div>[m
+[32m +			</div>[m
+[32m +		</div>[m
+[32m +	[m
+[32m +	</div>[m
+[32m +</div>[m
+[32m +[m
+[32m +<!--This is the gallery section. Taking it out unless otherwise needed-->[m
+[32m +    <!--<div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="0.5">[m
+[32m +        <div class="padding_slide5">[m
+[32m +            <div class="bord_top"></div>[m
+[32m +            <div class="effect_2"></div>[m
+[32m +            <div class="container clearfix">[m
+[32m +[m
+[32m +                <div id="content" class="grid_12">[m
+[32m +[m
+[32m +                </div>[m
+[32m +[m
+[32m +            </div>[m
+[32m +[m
+[32m +            <div class="flexslider">[m
+[32m +                <ul class="slides">[m
+[32m +                    <li><img src="images/slider/1.jpg" alt=""/></li>[m
+[32m +                    <li><img src="images/slider/2.jpg"  alt=""/></li>[m
+[32m +                    <li><img src="images/slider/3.jpg" alt=""/></li>[m
+[32m +                    <li><img src="images/slider/4.jpg" alt=""/></li>[m
+[32m +                    <li><img src="images/slider/5.jpg"  alt=""/></li>[m
+[32m +                    <li><img src="images/slider/6.jpg" alt=""/></li>[m
+[32m +                    <li><img src="images/slider/7.jpg" alt=""/></li>[m
+[32m +                    <li><img src="images/slider/8.jpg"  alt=""/></li>[m
+[32m +                    <li><img src="images/slider/9.jpg" alt=""/></li>[m
+[32m +                </ul>[m
+[32m +            </div>[m
+[32m +[m
+[32m +        </div>[m
+[32m +    </div>-->[m
+[32m +[m
+[32m +[m
+[32m +<!--Taking the "Events" section out unless needed in future releases-->[m
+[32m +    <!--<div class="slide" id="slide6" data-slide="6" data-stellar-background-ratio="0.5">[m
+[32m +        <div class="container clearfix">[m
+[32m +[m
+[32m +            <div id="content" class="grid_12">[m
+[32m +                <h1><span>Events</span></h1>[m
+[32m +                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in sem non sapien pellentesque malesuada. Pellentesque mattis posuere lorem a luctus. In orci odio, dignissim eget interdum sed, iaculis a dui. Suspendisse ornare rutrum auctor. Donec sit amet sapien id libero</h2>[m
+[32m +                <img class="icon_img" src="images/icon12.png" />[m
+[32m +            </div>[m
+[32m +            <div class="clear"></div>[m
+[32m +[m
+[32m +            <div class="grid_12 events_cont">[m
+[32m +                <img class="about_img" alt="" src="images/events_img1.jpg">[m
+[32m +                <a href="javascript:void(0);"><h4>Cras at orci eget libero pharetra dictum</h4></a>[m
+[32m +                <span>February 14, 2020</span>[m
+[32m +                <p>Mauris sit amet massa enim. Vivamus scelerisque feugiat ornare. Nulla quis nulla lectus. Curabitur sed erat vitae elit tincidunt tempor non quis turpis. Proin ac lacus quis sem ultrices faucibus. Suspendisse ut arcu quis odio commodo luctus et pulvinar erat. Nulla egestas ultricies dolor, eget mattis lorem mollis sed. Aliquam posuere urna eget nibh volutpat sed interdum lectus luctus. Vestibulum sodales sagittis suscipit. Nullam convallis cursus magna non condimentum. Proin in turpis vel massa porta fermentum sed quis sapien</p>[m
+[32m +            </div>[m
+[32m +            <div class="clear"></div>[m
+[32m +            <div class="grid_12 events_cont">[m
+[32m +                <img class="about_img" alt="" src="images/events_img2.jpg">[m
+[32m +                <a href="javascript:void(0);"><h4>Nunc tincidunt posuere urna quis</h4></a>[m
+[32m +                <span>February 14, 2020</span>[m
+[32m +                <p>Fusce faucibus egestas condimentum. Suspendisse ac nibh ullamcorper quam iaculis pretium eu eu turpis. Pellentesque dolor tellus, dapibus non hendrerit in, hendrerit eu eros. Etiam tortor ligula, tristique a elementum nec, ultrices quis dui. Etiam id mauris at velit porttitor venenatis. In bibendum, urna at convallis lacinia, quam dolor tempus ipsum, vitae pretium lorem dolor ut justo. Nullam ornare malesuada augue, non ornare dui scelerisque in. Donec sed mauris eget mauris cursus fermentum. Mauris porta vehicula ornare. Etiam quis auctor ante. Sed eu viverra eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam velit ipsum, ornare in ultricies vitae, ultricies at purus.</p>[m
+[32m +            </div>[m
+[32m +            <div class="clear"></div>[m
+[32m +[m
+[32m +        </div>[m
+[32m +    </div>[m
+[32m +[m
+[32m +[m
+[32m +    <div class="slide" id="slide7" data-slide="7" data-stellar-background-ratio="0.5">[m
+[32m +        <div class="effect_2 padding_slide7">[m
+[32m +            <div class="container clearfix">[m
+[32m +[m
+[32m +                <div id="content" class="grid_12">[m
+[32m +                    <span>Integer dapibus, tellus non laoreet gravida, neque turpis ultricies</span>[m
+[32m +                </div>[m
+[32m +[m
+[32m +            </div>[m
+[32m +        </div>[m
+[32m +    </div>[m
+[32m +    -->[m
+[32m +[m
+[32m +<div class="slide top-spacer" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">[m
+[32m +	<div class="effect_2 padding_slide3">[m
+[32m +		<div class="container clearfix">[m
+[32m +		[m
+[32m +			<div id="content" class="grid_12">[m
+[32m +				<p>I put something different here!</p>[m
+[32m +			</div>[m
+[32m +		[m
+[32m +		</div>[m
+[32m +	</div>[m
+[32m +</div>[m
+[32m +[m
+[32m +[m
+[32m +[m
+[32m +<div class="slide" id="slide10" data-slide="10" data-stellar-background-ratio="0.5">[m
+[32m +	<div class="container clearfix">[m
+[32m +		[m
+[32m +		<div id="content" class="grid_12">[m
+[32m +			<h1><span>Contact</span></h1>[m
+[32m +			<h2>Cras urna leo, fringilla nec aliquam ac, varius in enim. Maecenas non felis augue, quis sagittis justo. Donec gravida, arcu in aliquet convallis, purus lectus euismod nulla, in porttitor lorem ligula nec metus. Curabitur sit amet metus quis arcu pharetra hendrerit. Nulla at tempus ligula.</h2>[m
+[32m +			<img class="icon_img" src="images/icon13.png" />[m
+[32m +		</div>[m
+[32m +		<div class="clear"></div>[m
+[32m +		[m
+[32m +		<div class="grid_3 contact_det_block">[m
+[32m +			<p>Quisque imperdiet neque et nunc laoreet nec luctus erat consectetur. Proin dapibus aliquet odio</p>[m
+[32m +			<ul class="foot_block_intouch">[m
+[32m +				<li class="touch_phone"><p>(+1) 245 5462 252</p></li>[m
+[32m +				<li class="touch_clock"><p>Mon - Sat 9:00am - 6:00 pm</p></li>[m
+[32m +				<li class="touch_mail"><a href="mailto:support@lorem.com">support@lorem.com</a></li>[m
+[32m +				<li class="touch_site"><a href="javascript:void(0);">www.lorem.com</a></li>[m
+[32m +				<li class="touch_adress"><p>3301 Lorem Ipsum, Dolor Sit Amet St</p></li>[m
+[32m +			</ul>[m
+[32m +		</div>[m
+[32m +		<div class="grid_9 omega">[m
+[32m +			<div class="contact_form">  [m
+[32m +				<div id="note"></div>[m
+[32m +				<div id="fields">[m
+[32m +					<form id="ajax-contact-form" action="">[m
+[32m +						<input type="text" name="name" value="" placeholder="Name" />[m
+[32m +						<input type="text" name="subject" value="" placeholder="Phone" />[m
+[32m +						<input type="text" name="email" value="" placeholder="Email" />[m
+[32m +						<textarea name="message" id="message" placeholder="Message"></textarea>[m
+[32m +						<div class="clear"></div>[m
+[32m +						<input type="reset" class="contact_btn" value="Clear Form" />[m
+[32m +						<input type="submit" class="contact_btn send_btn" value="Send" />[m
+[32m +						<div class="clear"></div>[m
+[32m +					</form>[m
+[32m +				</div>[m
+[32m +			</div>[m
+[32m +		</div>[m
+[32m +		<div class="clear"></div>[m
+[32m +	[m
+[32m +	</div>[m
+[32m +	<!--Taking the map section out unless needed in the future-->[m
+[32m +    [m
+[32m +        <!--<div id="map_block"><iframe width="100%" height="722" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=los+angeles&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=53.080379,114.169922&amp;ie=UTF8&amp;hq=&amp;hnear=Los+Angeles,+California&amp;ll=34.052234,-118.243685&amp;spn=0.003427,0.006968&amp;t=m&amp;z=14&amp;output=embed"></iframe></div>-->[m
+[32m +	[m
+[32m +</div>[m
+[32m +[m
+[32m +[m
+[32m +<div id="footer">[m
+[32m +	<div class="container clearfix">[m
+[32m +		<div class="copyright">Delicious &copy; 2020 | <a href="javascript:void(0);">Privacy Policy</a></div>[m
+[32m +		<div id="back_top"><a class="button" title="" data-slide="1">Back to top</a></div>[m
+[32m +	</div>[m
+[32m +</div>[m
+[32m +[m
+[32m +[m
+[32m +</body>[m
+[32m +</html>[m
+[32m++=======[m
+[32m+ <!DOCTYPE HTML>[m
+[32m+ <html>[m
+[32m+ <html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">[m
+[32m+ <head>[m
+[32m+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>[m
+[32m+ 	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">[m
+[32m+ 	<title>Picky Eater Club</title>[m
+[32m+ 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">[m
+[32m+ 	<link rel="stylesheet" id="camera-css"  href="css/flexslider.css" type="text/css" media="all">[m
+[32m+ 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">[m
+[32m+ 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">[m
+[32m+ [m
+[32m+ 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>[m
+[32m+ [m
+[32m+ 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>[m
+[32m+ 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>[m
+[32m+ 	<script type="text/javascript" src="js/slider/jquery.flexslider-min.js"></script>[m
+[32m+ 	<script src="js/slider/functions.js" type="text/javascript"></script>[m
+[32m+ 	<script src="js/slider/script.js" type="text/javascript"></script>[m
+[32m+ 	<script type="text/javascript" src="js/js.js"></script>[m
+[32m+ 	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>[m
+[32m+ 	<script type="text/javascript" src="js/waypoints.min.js"></script>[m
+[32m+ [m
+[32m+ 	<!--[if lt IE 9]>[m
+[32m+ 		<script src="js/html5shiv.js"></script>[m
+[32m+ 		<script src="js/respond.src.js"></script>[m
+[32m+ 	<![endif]-->[m
+[32m+ [m
+[32m+ 	<script type="text/javascript">[m
+[32m+ 		$(document).ready(function(){[m
+[32m+ 			$("#ajax-contact-form").submit(function() {[m
+[32m+ 				var str = $(this).serialize();[m
+[32m+ 				$.ajax({[m
+[32m+ 					type: "POST",[m
+[32m+ 					url: "contact_form/contact_process.php",[m
+[32m+ 					data: str,[m
+[32m+ 					success: function(msg) {[m
+[32m+ 						// Message Sent - Show the 'Thank You' message and hide the form[m
+[32m+ 						if(msg == 'OK') {[m
+[32m+ 							result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';[m
+[32m+ 							$("#fields").hide();[m
+[32m+ 						} else {[m
+[32m+ 							result = msg;[m
+[32m+ 						}[m
+[32m+ 						$('#note').html(result);[m
+[32m+ 					}[m
+[32m+ 				});[m
+[32m+ 				return false;[m
+[32m+ 			});[m
+[32m+ 		});[m
+[32m+ 	</script>[m
+[32m+ [m
+[32m+ </head>[m
+[32m+ [m
+[32m+ <body>[m
+[32m+ [m
+[32m+ <div class="menu">[m
+[32m+ 	<div class="container clearfix">[m
+[32m+ [m
+[32m+ 		<div id="logo" class="fleft">[m
+[32m+ 			<a href="javascript:void(0);"><img class="logo_big" src="images/logo.png"><img class="logo_small" src="images/logo_small.png"></a>[m
+[32m+ 		</div>[m
+[32m+ [m
+[32m+ 		<div id="nav" class="fright">[m
+[32m+ 			<ul class="navigation">[m
+[32m+ 				<li data-slide="1">Home</li>[m
+[32m+ 				<li data-slide="2">About</li>[m
+[32m+ 				<li data-slide="4">Cupcakes</li>[m
+[32m+                     <!--These nav items are taken out. Their related sections in the page have been taken out as well. -->[m
+[32m+                     <!--<li data-slide="5">Gallery</li>-->[m
+[32m+ 				    <!--<li data-slide="6">Events</li>-->[m
+[32m+ 				<li data-slide="10">Contact</li>[m
+[32m+ 			</ul>[m
+[32m+ 		</div>[m
+[32m+ [m
+[32m+ 	</div>[m
+[32m+ </div>[m
+[32m+ [m
+[32m+ [m
+[32m+ <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">[m
+[32m+ 	<div class="effect_2 padding_slide1">[m
+[32m+ 		<div class="container clearfix">[m
+[32m+ 			<div id="content" class="grid_12">[m
+[32m+ 				<div class="filtr_bg">[m
+[32m+ 					<h1>Welcome to Picky Eater Club!</h1>[m
+[32m+ 					<h2>- Delicious Vegan Food</h2>[m
+[32m+ 					<div class="bord_in_red"></div>[m
+[32m+ 					<p>We believe that when you are conscious about the things you put in your body, this promotes strength, beauty and happier existence!</p>[m
+[32m+ 				</div>[m
+[32m+ 				<a class="button" title="" data-slide="2">Read More</a>[m
+[32m+ 			</div>[m
+[32m+ 		</div>[m
+[32m+ 	</div>[m
+[32m+ </div>[m
+[32m+ [m
+[32m+ [m
+[32m+ [m
+[32m+ <div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">[m
+[32m+ 	<div class="container clearfix">[m
+[32m+ [m
+[32m+ 		<div id="content" class="grid_12">[m
+[32m+ 			<h1>About</h1>[m
+[32m+ 			<h2>Picky Eater currently provides delectable vegan cupcakes in a variety of flavors.[m
+[32m+ We use all organic ingredients and earth friendly packaging for our cupcakes.[m
+[32m+ There will be more vegan items to come in the near future. Come join our club and[m
+[32m+ members are welcome!</h2>[m
+[32m+ 			<img class="icon_img" src="images/icon10.png" />[m
+[32m+ 		</div>[m
+[32m+ 		<div id="content" class="grid_12">[m
+[32m+ 			<h4>Who We Are?</h4>[m
+[32m+ 			<img class="about_img" src="images/about_img1.jpg" alt="" />[m
+[32m+ 			<p>[m
+[32m+ Picky eater is a club where vegans and other people whom are picky about the[m
+[32m+ things they put in their bodies due to dietary restrictions or conscious reasons[m
+[32m+ aren’t ostracized but supported.<br>[m
+[32m+ Peace, love and veggies are the mantra of the Picky Eater Club. The Picky Eater Club[m
+[32m+ envisions a Chicago and even greater a planet where people can have numerous[m
+[32m+ options to consume healthy, organic, earth friendly and flavorful vegan food.<br>[m
+[32m+ We embrace being different in this club! We firmly believe that by expanding[m
+[32m+ thoughts and taste pallets we will be able to end the earth’s pain! Not to mention[m
+[32m+ stop war, end child obesity has free parking everywhere for everyone in the city of[m
+[32m+ Chicago!<br>[m
+[32m+ </p>[m
+[32m+ 			<p></p>[m
+[32m+ 		</div>[m
+[32m+ 	</div>[m
+[32m+ </div>[m
+[32m+ [m
+[32m+ [m
+[32m+ [m
+[32m+ <div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">[m
+[32m+ 	<div class="effect_2 padding_slide3">[m
+[32m+ 		<div class="container clearfix">[m
+[32m+ [m
+[32m+ 			<div id="content" class="grid_12">[m
+[32m+ 				<p>Vegen food is soul food in it truest form. Soul food means to feed the soul.</p>[m
+[32m+ 			</div>[m
+[32m+ [m
+[32m+ 		</div>[m
+[32m+ 	</div>[m
+[32m+ </div>[m
+[32m+ [m
+[32m+ [m
+[32m+ [m
+[32m+ <div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">[m
+[32m+ 	<div class="container clearfix">[m
+[32m+ [m
+[32m+ 		<div id="content" class="grid_12">[m
+[32m+ 			<h1><span>Cupcakes</span></h1>[m
+[32m+ 			<h2>Picky Eater Club specializes in Vegan(dairy and egg free),trans fat-free deserts.</h2>[m
+[32m+ 			<img class="icon_img" src="images/icon11.png" />[m
+[32m+ 			<div class="overflow_hidden">[m
+[32m+ 				<!-- portfolio_block -->[m
+[32m+ 				<ul class="item gallery-list">[m
+[32m+ 					<li class="grid_3">[m
+[32m+ 						<a href="javascript:void(0);" class="hover_img">[m
+[32m+ 							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m+ 							<img src="images/portfolio/1.jpg" alt="" />[m
+[32m+ 							<span class="portfolio_descr">[m
+[32m+ 								<p>Aliquam posuere</p>[m
+[32m+ 								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m+ 								<span class="more_link" >More</span>[m
+[32m+ 							</span>[m
+[32m+ 						</a>[m
+[32m+ 					</li>[m
+[32m+ 					<li class="grid_3">[m
+[32m+ 						<a href="javascript:void(0);" class="hover_img">[m
+[32m+ 							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m+ 							<img src="images/portfolio/2.jpg" alt="" />[m
+[32m+ 							<span class="portfolio_descr">[m
+[32m+ 								<p>Aliquam posuere</p>[m
+[32m+ 								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m+ 								<span class="more_link" >More</span>[m
+[32m+ 							</span>[m
+[32m+ 						</a>[m
+[32m+ 					</li>[m
+[32m+ 					<li class="grid_3">[m
+[32m+ 						<a href="javascript:void(0);" class="hover_img">[m
+[32m+ 							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m+ 							<img src="images/portfolio/3.jpg" alt="" />[m
+[32m+ 							<span class="portfolio_descr">[m
+[32m+ 								<p>Aliquam posuere</p>[m
+[32m+ 								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m+ 								<span class="more_link" >More</span>[m
+[32m+ 							</span>[m
+[32m+ 						</a>[m
+[32m+ 					</li>[m
+[32m+ 					<!--Commenting out unneccessary menu images-->[m
+[32m+                     <!--<li class="grid_3">[m
+[32m+ 						<a href="javascript:void(0);" class="hover_img">[m
+[32m+ 							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m+ 							<img src="images/portfolio/4.jpg" alt="" />[m
+[32m+ 							<span class="portfolio_descr">[m
+[32m+ 								<p>Aliquam posuere</p>[m
+[32m+ 								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m+ 								<span class="more_link" >More</span>[m
+[32m+ 							</span>[m
+[32m+ 						</a>[m
+[32m+ 					</li>[m
+[32m+ 					<li class="grid_3">[m
+[32m+ 						<a href="javascript:void(0);" class="hover_img">[m
+[32m+ 							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m+ 							<img src="images/portfolio/5.jpg" alt="" />[m
+[32m+ 							<span class="portfolio_descr">[m
+[32m+ 								<p>Aliquam posuere</p>[m
+[32m+ 								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m+ 								<span class="more_link" >More</span>[m
+[32m+ 							</span>[m
+[32m+ 						</a>[m
+[32m+ 					</li>[m
+[32m+ 					<li class="grid_3">[m
+[32m+ 						<a href="javascript:void(0);" class="hover_img">[m
+[32m+ 							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m+ 							<img src="images/portfolio/6.jpg" alt="" />[m
+[32m+ 							<span class="portfolio_descr">[m
+[32m+ 								<p>Aliquam posuere</p>[m
+[32m+ 								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m+ 								<span class="more_link" >More</span>[m
+[32m+ 							</span>[m
+[32m+ 						</a>[m
+[32m+ 					</li>[m
+[32m+ 					<li class="grid_3">[m
+[32m+ 						<a href="javascript:void(0);" class="hover_img">[m
+[32m+ 							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m+ 							<img src="images/portfolio/7.jpg" alt="" />[m
+[32m+ 							<span class="portfolio_descr">[m
+[32m+ 								<p>Aliquam posuere</p>[m
+[32m+ 								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m+ 								<span class="more_link" >More</span>[m
+[32m+ 							</span>[m
+[32m+ 						</a>[m
+[32m+ 					</li>[m
+[32m+ 					<li class="grid_3">[m
+[32m+ 						<a href="javascript:void(0);" class="hover_img">[m
+[32m+ 							<span class="img_bord"><img src="images/img_bord.png" /></span>[m
+[32m+ 							<img src="images/portfolio/8.jpg" alt="" />[m
+[32m+ 							<span class="portfolio_descr">[m
+[32m+ 								<p>Aliquam posuere</p>[m
+[32m+ 								<span>Nullam luctus lacus in massa feugiat venenatis.</span>[m
+[32m+ 								<span class="more_link" >More</span>[m
+[32m+ 							</span>[m
+[32m+ 						</a>[m
+[32m+ 					</li>-->[m
+[32m+ 					<div class="clear"></div>[m
+[32m+ 				</ul>[m
+[32m+ 				<!-- //portfolio_block -->[m
+[32m+ 			</div>[m
+[32m+ [m
+[32m+ 		</div>[m
+[32m+ [m
+[32m+ 	</div>[m
+[32m+ </div>[m
+[32m+ [m
+[32m+ <!--This is the gallery section. Taking it out unless otherwise needed-->[m
+[32m+     <!--<div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="0.5">[m
+[32m+         <div class="padding_slide5">[m
+[32m+             <div class="bord_top"></div>[m
+[32m+             <div class="effect_2"></div>[m
+[32m+             <div class="container clearfix">[m
+[32m+ [m
+[32m+                 <div id="content" class="grid_12">[m
+[32m+ [m
+[32m+                 </div>[m
+[32m+ [m
+[32m+             </div>[m
+[32m+ [m
+[32m+             <div class="flexslider">[m
+[32m+                 <ul class="slides">[m
+[32m+                     <li><img src="images/slider/1.jpg" alt=""/></li>[m
+[32m+                     <li><img src="images/slider/2.jpg"  alt=""/></li>[m
+[32m+                     <li><img src="images/slider/3.jpg" alt=""/></li>[m
+[32m+                     <li><img src="images/slider/4.jpg" alt=""/></li>[m
+[32m+                     <li><img src="images/slider/5.jpg"  alt=""/></li>[m
+[32m+                     <li><img src="images/slider/6.jpg" alt=""/></li>[m
+[32m+                     <li><img src="images/slider/7.jpg" alt=""/></li>[m
+[32m+                     <li><img src="images/slider/8.jpg"  alt=""/></li>[m
+[32m+                     <li><img src="images/slider/9.jpg" alt=""/></li>[m
+[32m+                 </ul>[m
+[32m+             </div>[m
+[32m+ [m
+[32m+         </div>[m
+[32m+     </div>-->[m
+[32m+ [m
+[32m+ [m
+[32m+ <!--Taking the "Events" section out unless needed in future releases-->[m
+[32m+     <!--<div class="slide" id="slide6" data-slide="6" data-stellar-background-ratio="0.5">[m
+[32m+         <div class="container clearfix">[m
+[32m+ [m
+[32m+             <div id="content" class="grid_12">[m
+[32m+                 <h1><span>Events</span></h1>[m
+[32m+                 <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in sem non sapien pellentesque malesuada. Pellentesque mattis posuere lorem a luctus. In orci odio, dignissim eget interdum sed, iaculis a dui. Suspendisse ornare rutrum auctor. Donec sit amet sapien id libero</h2>[m
+[32m+                 <img class="icon_img" src="images/icon12.png" />[m
+[32m+             </div>[m
+[32m+             <div class="clear"></div>[m
+[32m+ [m
+[32m+             <div class="grid_12 events_cont">[m
+[32m+                 <img class="about_img" alt="" src="images/events_img1.jpg">[m
+[32m+                 <a href="javascript:void(0);"><h4>Cras at orci eget libero pharetra dictum</h4></a>[m
+[32m+                 <span>February 14, 2020</span>[m
+[32m+                 <p>Mauris sit amet massa enim. Vivamus scelerisque feugiat ornare. Nulla quis nulla lectus. Curabitur sed erat vitae elit tincidunt tempor non quis turpis. Proin ac lacus quis sem ultrices faucibus. Suspendisse ut arcu quis odio commodo luctus et pulvinar erat. Nulla egestas ultricies dolor, eget mattis lorem mollis sed. Aliquam posuere urna eget nibh volutpat sed interdum lectus luctus. Vestibulum sodales sagittis suscipit. Nullam convallis cursus magna non condimentum. Proin in turpis vel massa porta fermentum sed quis sapien</p>[m
+[32m+             </div>[m
+[32m+             <div class="clear"></div>[m
+[32m+             <div class="grid_12 events_cont">[m
+[32m+                 <img class="about_img" alt="" src="images/events_img2.jpg">[m
+[32m+                 <a href="javascript:void(0);"><h4>Nunc tincidunt posuere urna quis</h4></a>[m
+[32m+                 <span>February 14, 2020</span>[m
+[32m+                 <p>Fusce faucibus egestas condimentum. Suspendisse ac nibh ullamcorper quam iaculis pretium eu eu turpis. Pellentesque dolor tellus, dapibus non hendrerit in, hendrerit eu eros. Etiam tortor ligula, tristique a elementum nec, ultrices quis dui. Etiam id mauris at velit porttitor venenatis. In bibendum, urna at convallis lacinia, quam dolor tempus ipsum, vitae pretium lorem dolor ut justo. Nullam ornare malesuada augue, non ornare dui scelerisque in. Donec sed mauris eget mauris cursus fermentum. Mauris porta vehicula ornare. Etiam quis auctor ante. Sed eu viverra eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam velit ipsum, ornare in ultricies vitae, ultricies at purus.</p>[m
+[32m+             </div>[m
+[32m+             <div class="clear"></div>[m
+[32m+ [m
+[32m+         </div>[m
+[32m+     </div>[m
+[32m+ [m
+[32m+ [m
+[32m+     <div class="slide" id="slide7" data-slide="7" data-stellar-background-ratio="0.5">[m
+[32m+         <div class="effect_2 padding_slide7">[m
+[32m+             <div class="container clearfix">[m
+[32m+ [m
+[32m+                 <div id="content" class="grid_12">[m
+[32m+                     <span>Integer dapibus, tellus non laoreet gravida, neque turpis ultricies</span>[m
+[32m+                 </div>[m
+[32m+ [m
+[32m+             </div>[m
+[32m+         </div>[m
+[32m+     </div>[m
+[32m+     -->[m
+[32m+ [m
+[32m+ <div class="slide top-spacer" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">[m
+[32m+ 	<div class="effect_2 padding_slide3">[m
+[32m+ 		<div class="container clearfix">[m
+[32m+ [m
+[32m+ 			<div id="content" class="grid_12">[m
+[32m+ 				<p>Nothing will benefit human health and increase chances for survival of life on earth as much as the evolution to a vegetarian diet. ~Albert Einstein </p>[m
+[32m+ 			</div>[m
+[32m+ [m
+[32m+ 		</div>[m
+[32m+ 	</div>[m
+[32m+ </div>[m
+[32m+ [m
+[32m+ [m
+[32m+ [m
+[32m+ <div class="slide" id="slide10" data-slide="10" data-stellar-background-ratio="0.5">[m
+[32m+ 	<div class="container clearfix">[m
+[32m+ [m
+[32m+ 		<div id="content" class="grid_12">[m
+[32m+ 			<h1><span>Contact</span></h1>[m
+[32m+ 			<h2>We'd love to hear from you? Please contact us at Picky Eater with any questions or to place an order. </h2>[m
+[32m+ 			<img class="icon_img" src="images/icon13.png" />[m
+[32m+ 		</div>[m
+[32m+ 		<div class="clear"></div>[m
+[32m+ [m
+[32m+ 		<div class="grid_3 contact_det_block">[m
+[32m+ 			<p>Provide your contact info and your message and we will respond as quickly as possible.</p>[m
+[32m+ 			<ul class="foot_block_intouch">[m
+[32m+ 				<li class="touch_phone"><p>(+1) 773 255 5555</p></li>[m
+[32m+ 				<!--<li class="touch_clock"><p>Mon - Sat 9:00am - 6:00 pm</p></li>-->[m
+[32m+ 				<li class="touch_mail"><a href="mailto:jelani.frazier@pickyeaterclub.com ">Email Us!</a></li>[m
+[32m+ 				<li class="touch_site"><a href="javascript:void(0);">www.PickyEaterClub.com</a></li>[m
+[32m+ 				<!--<li class="touch_adress"><p>3301 Lorem Ipsum, Dolor Sit Amet St</p></li>-->[m
+[32m+ 			</ul>[m
+[32m+ 		</div>[m
+[32m+ 		<div class="grid_9 omega">[m
+[32m+ 			<div class="contact_form">[m
+[32m+ 				<div id="note"></div>[m
+[32m+ 				<div id="fields">[m
+[32m+ 					<form id="ajax-contact-form" action="">[m
+[32m+ 						<input type="text" name="name" value="" placeholder="Name" />[m
+[32m+ 						<input type="text" name="subject" value="" placeholder="Phone" />[m
+[32m+ 						<input type="text" name="email" value="" placeholder="Email" />[m
+[32m+ 						<textarea name="message" id="message" placeholder="Message"></textarea>[m
+[32m+ 						<div class="clear"></div>[m
+[32m+ 						<input type="reset" class="contact_btn" value="Clear Form" />[m
+[32m+ 						<input type="submit" class="contact_btn send_btn" value="Send" />[m
+[32m+ 						<div class="clear"></div>[m
+[32m+ 					</form>[m
+[32m+ 				</div>[m
+[32m+ 			</div>[m
+[32m+ 		</div>[m
+[32m+ 		<div class="clear"></div>[m
+[32m+ [m
+[32m+ 	</div>[m
+[32m+ 	<!--Taking the map section out unless needed in the future-->[m
+[32m+ [m
+[32m+         <!--<div id="map_block"><iframe width="100%" height="722" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=los+angeles&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=53.080379,114.169922&amp;ie=UTF8&amp;hq=&amp;hnear=Los+Angeles,+California&amp;ll=34.052234,-118.243685&amp;spn=0.003427,0.006968&amp;t=m&amp;z=14&amp;output=embed"></iframe></div>-->[m
+[32m+ [m
+[32m+ </div>[m
+[32m+ [m
+[32m+ [m
+[32m+ <div id="footer">[m
+[32m+ 	<div class="container clearfix">[m
+[32m+ 		<div class="copyright">Picky Eater Club inc &copy; 2015 | <a href="javascript:void(0);">Privacy Policy</a></div>[m
+[32m+ 		<div id="back_top"><a class="button" title="" data-slide="1">Back to top</a></div>[m
+[32m+ 	</div>[m
+[32m+ </div>[m
+[32m+ [m
+[32m+ [m
+[32m+ </body>[m
+[32m+ </html>[m
+[32m++>>>>>>> origin/master[m
