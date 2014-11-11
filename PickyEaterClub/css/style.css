@@ -145,7 +145,7 @@ h4 {
 
 #slide1{
 	background-color:#ffffff;
-	background-image:url(../images/slide1_bg.jpg);
+	background-image:url(../images/about_img1r.jpg);
 	text-align:center;
 	background-position:0 0 !important;
 	background-size: cover !important;
@@ -225,7 +225,7 @@ img.about_img {
 /* ____________________________________ Slide 3 ____________________________________ */ 
 
 #slide3{
-	background-image:url(../images/slide3_bg.jpg);
+	background-image:url(../images/slide3_bgr.jpg);
 	background-size: cover !important;
 	width:100%;
 	background-position:0 0 !important;
@@ -703,5 +703,5 @@ ul.foot_block_intouch {
 
 
 .item {
-
+    margin-left: 130px;
 }
